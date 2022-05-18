@@ -1,0 +1,23 @@
+name = "backup-worker"
+type = "javascript"
+account_id = ""
+zone_id = ""
+workers_dev = true
+compatibility_date = "2022-05-13"
+routes = [""]
+kv_namespaces = [
+    { binding = "B2CONF", id = "", preview_id = "" }
+]
+
+[vars]
+SECRET = ""
+API_TOKEN = ""
+B2_ACCOUNT_ID = ""
+B2_KEY_ID = ""
+
+
+[build]
+command = "yarn install && yarn run build"
+
+[build.upload]
+format = "service-worker"
